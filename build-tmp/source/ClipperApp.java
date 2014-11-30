@@ -15,7 +15,7 @@ import java.io.InputStream;
 import java.io.OutputStream; 
 import java.io.IOException; 
 
-public class CaptureApp extends PApplet {
+public class ClipperApp extends PApplet {
 
 
 
@@ -152,7 +152,7 @@ public void nextTime(float t) {
   }
 }
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "CaptureApp" };
+    String[] appletArgs = new String[] { "ClipperApp" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
