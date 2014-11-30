@@ -94,11 +94,12 @@ void mousePressed(){
 void mouseReleased() {
   bMousePressed = false;
   if (mov != null) {
-    mov.jump(video_position);
     if (bPlay) {
       mov.play();
+      mov.jump(video_position);
     } else {
       mov.play();
+      mov.jump(video_position);
       mov.pause();
     }
   }  
