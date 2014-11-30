@@ -72,8 +72,6 @@ public void draw() {
     if (bMousePressed) {
       fill(255, 0, 0);
       text("W:" + targetW + "H:" + targetH, targetX + 10, targetY - 10);
-      line(targetX, targetY, targetX + targetW, targetY, targetH);
-      line(targetX + targetW, targetY, targetX, targetY, targetH);
     }
 
     fill(255, 255, 255);
@@ -126,7 +124,9 @@ public void mouseReleased() {
 }
 
 public void mouseDragged() {
-  setTargetRectangleByWidth(mouseX - tmpMouseX);
+  if (!cp5.isMouseOver()) {
+    setTargetRectangleByWidth(mouseX - tmpMouseX);
+  }
 }
 
 public void fileSelected(File file) {

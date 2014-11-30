@@ -105,7 +105,9 @@ void mouseReleased() {
 }
 
 void mouseDragged() {
-  setTargetRectangleByWidth(mouseX - tmpMouseX);
+  if (!cp5.isMouseOver()) {
+    setTargetRectangleByWidth(mouseX - tmpMouseX);
+  }
 }
 
 void fileSelected(File file) {
